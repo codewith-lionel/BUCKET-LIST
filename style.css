@@ -1,0 +1,11 @@
+.add-item-button {
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+      transition: transform  0.5s ease, background 2s ease;
+    
+}
+.add-item-button:hover {
+    background: linear-gradient(to right, #bfe9ff, #ff6e7f);
+    cursor: pointer;
+    transform:  scale(1.010) ;
+    
+}
