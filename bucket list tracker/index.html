@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bucket List Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body
+    class="bg-gradient-to-r from-[#ff6e7f] to-[#bfe9ff] text-white antialiased text-center"
+  >
+    <main class="container mx-auto p-4">
+      <div class="bg-white text-black mt-20 rounded-lg p-4 shadow-lg">
+        <!-- name section  -->
+        <section>
+          <h1
+            class="text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-purple-600"
+          >
+            BUCKET LIST TRACKER
+          </h1>
+        </section>
+        <!-- Add Items Section  -->
+        <section>
+          <h2 class="text-2xl font-bold mt-4 text-left">Add Items</h2>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-4">
+            <input
+              type="text"
+              id="item-input"
+              class="border border-gray-300 p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-pink-500"
+              placeholder="Enter item name eg : skydiving"
+            />
+            <select
+              name="item-category"
+              id="item-category"
+              class="border border-gray-300 p-2 rounded w-full focus:outline-none focus:ring-2 focus:ring-pink-500"
+              required
+            >
+              <option value="" disabled selected hidden>Select Category</option>
+              <option value="adventure">Adventure</option>
+              <option value="travel">Travel</option>
+              <option value="skill">Skill</option>
+              <option value="experience">Experience</option>
+            </select>
+            <input
+              type="date"
+              id="item-date"
+              class="border border-gray-300 p-2 rounded focus:outline-none focus:ring-2 focus:ring-pink-500"
+            />
+            <button
+              id="add-item-button"
+              class="add-item-button my-4 text-white text-lg p-2 rounded sm:col-span-3"
+              onclick="addItem()"
+            >
+              Add Item
+            </button>
+          </div>
+        </section>
+
+        <!-- progress bar section  -->
+        <section>
+          <h2 class="text-2xl font-bold mt-4 text-left">Progress</h2>
+          <div class="w-full bg-gray-200 rounded-full h-6 mt-2">
+            <div
+              id="progress-bar"
+              class="bg-gradient-to-r from-pink-500 to-purple-600 h-6 rounded-full text-center text-white"
+              style="width: 0%"
+            ></div>
+          </div>
+          <p class="mt-2">
+            completed : <span id="completed-count">0</span>/<span
+              id="total-count"
+              >0</span
+            >
+          </p>
+        </section>
+        <!-- filter section -->
+        <section class="mt-4 text-left">
+          <h2 class="text-2xl font-bold mt-4 text-left">Filter Items</h2>
+         <div class="flex flex-wrap  gap-4 mt-4">
+             <label >
+            <input
+              type="radio"
+              name="filter"
+              id="filter-category"
+              value="ALL"
+              checked
+            />
+            ALL
+          </label>
+          <label >
+            <input
+              type="radio"
+              name="filter"
+              id="filter-category"
+              value="Adventure"
+              
+            />
+            Adventure
+          </label>
+          <label >
+            <input
+              type="radio"
+              name="filter"
+              id="filter-category"
+              value="Travel"
+        
+            />
+            Travel
+          </label>
+          <label >
+            <input
+              type="radio"
+              name="filter"
+              id="filter-category"
+              value="Skill"
+            
+            />
+            Skill
+          </label>
+          
+          <label >
+            <input
+              type="radio"
+              name="filter"
+              id="filter-category"
+              value="Experience"
+              
+            />
+            Experience
+          </label>
+         </div>
+        </section>
+        <!-- Items List Section  -->
+         <section>
+            <h2 class="text-2xl font-bold mt-4 text-left">Items to Achieve</h2>
+            <ul id="item-list" class="list-disc pl-5 mt-2">
+                <!-- List items will be added here -->
+                 
+            </ul>
+         </section>
+      </div>
+      <div class="bg-white p-4 rounded-lg shadow-md">
+         <button id="reset-button" class="bg-pink-500 text-white px-4 py-2 rounded">Reset List</button>
+      </div>
+    </main>
+  </body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="./script.js"></script>
+</html>
